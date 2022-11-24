@@ -25,7 +25,7 @@ public class TelegramBotConfig {
 //    String webHookPath;
     String userName = "InMySchoolBot";
     String botToken = "5699959668:AAETPOC3Tacmt-z2ngYklf-_t0c7JM1AZT8";
-    String webHookPath = "https://2f37-2601-201-8201-d130-6042-3e4e-303-7f38.ngrok.io";
+    String webHookPath = "https://081c-2601-201-8201-d130-4062-975b-5663-f8bc.ngrok.io";
 
     @Bean
     public DefaultBotOptions getDefaultBotOptions() {

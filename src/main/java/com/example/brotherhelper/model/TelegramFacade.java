@@ -13,20 +13,21 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class TelegramFacade {
 
-    public BotApiMethod handleUpdate(Update update) {
+    public SendMessage handleUpdate(Update update) {
+
+        SendMessage sendMessage = new SendMessage();
         if (update.hasCallbackQuery()) {
             CallbackQuery callbackQuery = update.getCallbackQuery();
             return null;
         } else {
             Message message = update.getMessage();
-            SendMessage sendMessage = new SendMessage();
             sendMessage.setChatId(String.valueOf(message.getChatId()));
             if (message.hasText()) {
                 sendMessage.setText("Hello world");
                 return sendMessage;
             }
         }
-        return null;
+        return sendMessage;
     }
 
 }
